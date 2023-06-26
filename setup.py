@@ -24,8 +24,9 @@ def main ():
     # Change into the OpenLane directory
     os.chdir("OpenLane/")
     
-    # Move the values init_design.py to the Openlane directory
+    # Move the values init_design.py & get_gds.py to the Openlane directory
     s.call ("mv ~/init_design.py .", shell=True)
+    s.call("mv ~/get_gds.py .", shell=True) 
 
     # Test the flow 
     s.call ("make test", shell=True)
