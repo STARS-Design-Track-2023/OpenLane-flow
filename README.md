@@ -7,7 +7,7 @@ cd OpenLane-flow
 ./setup.py
 ```
 
-If the insatall was successful you should see the following output in you terminal at the 
+If the install was successful you should see the following output in you terminal at the 
 end of your run. You have sucessfullu set up your OpenLane environment!!
 ```
 ```
@@ -22,6 +22,7 @@ Hopefully now you see a successful test run.
 
 ## Common Error(s)
 
+### 1) Environment variable is not recognized
 If you get the following error.
 ```
 ```
