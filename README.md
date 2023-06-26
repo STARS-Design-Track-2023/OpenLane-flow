@@ -3,7 +3,7 @@
 ## Installation
 Installs a few simple scripts that hopefully make your OpenLane experience smoother.
 ```
-git clone git@github.com:STARS-Design-Track-2023/OpenLane-flow.git
+git clone https://github.com/STARS-Design-Track-2023/OpenLane-flow.git
 cd OpenLane-flow
 ./setup.py
 ```
