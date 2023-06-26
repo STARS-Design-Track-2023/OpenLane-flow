@@ -126,7 +126,7 @@ print_vars:
 	@echo "Testbench: $(TB)"
 	@echo "Top level module: $(TOP_MODULE)"
 	@echo "Testbench module: $(TB_MODULE)"
-	@echo "Gate Library: '$(GATE_LIB)'"
+	@echo "Gate Library: '$(PDK)'"
 	@echo "Source work library: '$(SRC)'"
 	@echo "Mapped work library: '$(MAP)'"
 
