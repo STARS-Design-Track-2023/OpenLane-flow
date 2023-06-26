@@ -10,13 +10,16 @@
 
 # Source
 
+
+
+KLAYOUT_FLAGS := $(SAK)/klayout/tech/sky130A/sky130A.krc -nn $(SAK)/klayout/tech/sky130A/sky130A.lyt -l $(SAK)/klayout/tech/sky130A/sky130A-eft.lyp
 # Specify the name of the top level file (do not include the source folder in the name)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS
-TOP_FILE         := 
+TOP_FILE         := sample_rate_clkdiv.v
 
 # List internal component/block files here (separate the filenames with spaces)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS
-COMPONENT_FILES  := 
+COMPONENT_FILES  := tb_sample_rate_clkdiv.v
 
 # Specify the filepath of the test bench you want to use (ie. tb_top_level.sv)
 # (do not include the source folder in the name)
@@ -108,6 +111,13 @@ setup:
 	@mkdir -p $(MAP)
 	@mkdir -p $(BUILD)
 	@mkdir -p $(SRC)
+
+
+# moves the GDS file to working directory and open it w/ klayout flags
+view_gds:
+	@./get_gds.py $(TOP_MODULE)
+	@klayout -c $(KLAYOUT_FLAGS) $(TOP_MODULE).gds
+
 
 # Removes all non essential files that were made during the building process.
 clean:
