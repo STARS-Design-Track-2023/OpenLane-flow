@@ -18,6 +18,8 @@ def init_design (design):
     s.call ("cp ~/build/makefile "+design+"/.", shell=True)
     s.call ("cp -r ~/build/cvc_pdk "+design+"/.", shell=True)
 
+
+    os.chdir(design)
     # make the required directories
     s.call ("mkdir -p src", shell=True)
     s.call ("mkdir -p mapped", shell=True)
