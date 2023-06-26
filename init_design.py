@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/env python3                                                                                                                                                
+                                                                                                                                                                      
 # Import the required libraries
 import subprocess as s
 import os, sys
@@ -17,6 +17,12 @@ def init_design (design):
     s.call ("cp ~/build/config.json "+design+"/.", shell=True)
     s.call ("cp ~/build/makefile "+design+"/.", shell=True)
     s.call ("cp -r ~/build/cvc_pdk "+design+"/.", shell=True)
+
+    # make the required directories
+    s.call ("mkdir -p src", shell=True)
+    s.call ("mkdir -p mapped", shell=True)
+    s.call ("mkdir -p docs", shell=True)
+    s.call ("mkdir -p sim_build", shell=True)
 
     return
 
