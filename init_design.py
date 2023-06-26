@@ -26,6 +26,7 @@ def init_design (design):
     s.call ("mkdir -p mapped", shell=True)
     s.call ("mkdir -p docs", shell=True)
     s.call ("mkdir -p sim_build", shell=True)
+    s.call ("mv ../../get_gds.py .", shell=True)
 
     return
 
