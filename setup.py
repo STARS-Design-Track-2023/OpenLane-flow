@@ -10,6 +10,8 @@ def main ():
     s.call ("mv pdk ~/.", shell=True)
     s.call ("mv build ~/.", shell=True)
     s.call ("mv init_design.py ~/.", shell=True)
+    s.call("mv get_gds.py ~/.", shell=True) 
+
 
     # Change the directory
     os.chdir(os.path.expanduser('~'))
