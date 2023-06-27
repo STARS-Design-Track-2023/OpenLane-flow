@@ -6,6 +6,7 @@ Installs a few simple scripts that hopefully make your OpenLane experience smoot
 git clone https://github.com/STARS-Design-Track-2023/OpenLane-flow.git
 cd OpenLane-flow
 ./setup.py
+
 ```
 
 If the install was successful you should see the following output in you terminal at the 
