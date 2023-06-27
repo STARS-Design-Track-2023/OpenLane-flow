@@ -17,6 +17,7 @@ def init_design (design):
     s.call ("cp ~/build/config.json "+design+"/.", shell=True)
     s.call ("cp ~/build/makefile "+design+"/.", shell=True)
     s.call ("cp -r ~/build/cvc_pdk "+design+"/.", shell=True)
+    s.call ("cp ~/build/get_gds.py "+design+"/.", shell=True)
     
     # change to the design dir
     os.chdir(design)
@@ -26,7 +27,6 @@ def init_design (design):
     s.call ("mkdir -p mapped", shell=True)
     s.call ("mkdir -p docs", shell=True)
     s.call ("mkdir -p sim_build", shell=True)
-    s.call ("mv ../../get_gds.py .", shell=True)
 
     return
 

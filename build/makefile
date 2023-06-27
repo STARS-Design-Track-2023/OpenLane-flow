@@ -11,15 +11,17 @@
 # Source
 
 
-
+# Flags to run make gds
 KLAYOUT_FLAGS := $(SAK)/klayout/tech/sky130A/sky130A.krc -nn $(SAK)/klayout/tech/sky130A/sky130A.lyt -l $(SAK)/klayout/tech/sky130A/sky130A-eft.lyp
+
+
 # Specify the name of the top level file (do not include the source folder in the name)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS
-TOP_FILE         := sample_rate_clkdiv.v
+TOP_FILE         := 
 
 # List internal component/block files here (separate the filenames with spaces)
 # NOTE: YOU WILL NEED TO SET THIS VARIABLE'S VALUE WHEN WORKING WITH HEIRARCHICAL DESIGNS
-COMPONENT_FILES  := tb_sample_rate_clkdiv.v
+COMPONENT_FILES  := 
 
 # Specify the filepath of the test bench you want to use (ie. tb_top_level.sv)
 # (do not include the source folder in the name)
@@ -101,6 +103,7 @@ help:
 	@echo "                 format file must be saved in same directory as"
 	@echo "                 the makefile."
 	@echo "  view         - view the gate level circuit schematic"
+	@echo "  view_gds     - view the gds file with KLayout"
 	@echo "----------------------------------------------------------------"
 
 all: $(SIM_SOURCE)
